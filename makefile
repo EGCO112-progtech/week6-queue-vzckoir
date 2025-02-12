@@ -1,4 +1,4 @@
 argument: main.c 
-	gcc main.c -o Q
+	NodePtr t=q->headPtr;
 run: Q
 	./Q
