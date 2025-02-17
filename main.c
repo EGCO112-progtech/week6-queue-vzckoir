@@ -7,10 +7,10 @@
 
 int main(int argc , char **argv) {
   NodePtr headPtr=NULL;
-  NodePtr tailPtr=NULL;
-/* For struct Queue */
+   NodePtr tailPtr=NULL;
+
   Queue  q;
-   q.headPtr=NULL;
+   q. headPtr=NULL;
    q.tailPtr=NULL;
    q.size=0;
 
@@ -19,15 +19,20 @@ int main(int argc , char **argv) {
 
  for(i=1;i<argc;i++){
         if(strcmp(argv[i],"x")==0){
+        
             x=dequeue(&headPtr,&tailPtr);
-            if(x!=0||q.size>0)
+            if(x!=0)
             printf("dequeing %d\n",x);
-          else printf("empty queue\n");
         }
         else {
-       enqueue(&headPtr,&tailPtr, atoi(argv[i]));
-           
+      enqueue(&headPtr,&tailPtr, atoi(argv[i]));
+    //  printf("%d",atoi(argv[i]));
+   //   printf("\n");
+       
         }
+        
  }
+
+ 
   return 0;
 }
